@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>event_keys</title>
+</head>
+
+<body onresize="hello()" onscroll="hello()" oncontextmenu="return false;">
+
+  <h1>event keys </h1>
+
+  <!-- clickable events  -->
+  <h2> we can also restrict on resize if the user resize the window he will get an "alert" for this window.</h2>
+  <p>for this onresize is used in body tag / element.</p>
+
+
+
+
+  <h2>on click events and mouse events</h2>
+
+  <!-- ========== on single click ==========  -->
+  <button onclick="hello()"> single click</button>
+
+  <!-- ========== on double click ==========  -->
+  <button ondblclick="hiright()"> double click</button>
+
+  <!-- ========== on right click ========== (for right click here "" oncontextmenu "" is used.) -->
+  <button oncontextmenu="hiright()"> right click</button>
+
+  <!-- ========== on mouse enter ==========  -->
+  <button onmouseenter="hiright()"> mouse enter</button>
+
+  <!-- ========== on mouse out ==========  -->
+  <button onmouseout="hiright()"> mouse out</button>
+
+  <!-- ========== on Scroll ==========  -->
+  <h2>if the user scrolls the the page then he will get an alert. </h2>
+  <p>for this onscroll is used in body tag / element.</p>
+
+  <h4>on scroll paragraph.</h4>
+  <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptates laboriosam nihil totam repellat facilis porro aspernatur laborum recusandae sunt deleniti asperiores in veniam, rem maiores nesciunt delectus deserunt ratione incidunt aliquid laudantium maxime! Qui veniam hic maiores natus nemo expedita numquam, excepturi neque nulla sit, itaque rem corporis. Necessitatibus pariatur repellat commodi hic eius similique. Quam, enim! Possimus voluptatem ab eaque animi delectus accusamus, non asperiores reprehenderit dicta excepturi reiciendis consequatur quam tempora rem consequuntur adipisci eius aperiam dolore unde ad inventore? Molestiae, eveniet ipsam?</p>
+
+<h3>we can restrict the to use right click by using the ' oncontextmenu="return false;" '</h3>
+
+  <script>
+    function hello() {
+      alert('Warning !!!!!');
+    }
+    function hiright() {
+      alert('altert ????????');
+    }
+  </script>
+</body>
+
+</html>

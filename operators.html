@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Operators</title>
+</head>
+
+<body>
+
+  <!-- arithmetic operators :  +, -, *, /, %  -->
+  <!-- assignment operators : =, +=, -=, *=, /= -->
+  <!-- comparison operators : <, >, <=, >=, ==, ===, != -->
+  <!-- logical operators : &&, ||, !  -->
+
+  <script>
+    // types of operators are unary, binary, ternary. 
+
+    var a = 10;
+    var b = 4;
+    var c = a + b; //here c is binary operator.
+
+    c++; // and here c is unary operator.
+
+  </script>
+  <script>
+    // practice examples. 
+    // ======arithmetic operators====== 
+    var a = 10;
+    var b = 4;
+    var c = a / b;
+
+
+    c++;
+    c++;
+    c++;
+    c++;
+    c--;
+    c++;
+    c++;
+    c--;
+    c++;
+    c--;
+    c--;
+    c++;
+    c--; //17 //*=43 //5.5(/) 
+    document.write(c + "<br>");
+
+
+    // ======assignment operators====== 
+
+    var x = 10;
+    var y = 12;
+
+    x += y;
+
+    document.write(x + "<br>");  //22
+    document.write(y);  //12
+
+    // ====== comparison operators ======
+
+    var a = 12;
+    var b = "12"; //== only checks only values 
+    // === checks value and data types also 
+
+    document.write("<br>")
+    if (a === b)
+      document.write('true');
+    else
+      document.write('false');
+
+      // ======logical operators======
+
+      // the below example of "if else" is ternary 
+      document.write('<br>')    
+      var age = 22;  
+
+      (age>=18) ? document.write("you are an adult.") : document.write('you are minor.');
+      document.write('<br>');  
+
+      //======logical operators======
+
+      var day = 'monday';
+
+      (day === 'saturday' || day === 'sunday') ? document.write('its weekend') : document.write("its weekdays");
+
+      //for ternary operator we can also do this 
+      document.write('<br>');   
+
+      var age = 23; 
+      var adult = (age >= 18) ? 'you are an adult.' : 'you are a minor';
+      document.write(adult);
+
+  </script>
+</body>
+
+</html>
