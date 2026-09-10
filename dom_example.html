@@ -1,0 +1,103 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>dom element</title>
+  </head>
+
+  <body>
+    <!-- =========== toggle theme ==========  -->
+    <br /><br />
+    <button onclick="toggleTheme()">dark-mode</button>
+    <style>
+      .dark-mode {
+        background-color: black;
+        color: white;
+        font-size: 23px;
+      }
+    </style>
+
+    <!-- =========== Change Text on click ==========  -->
+
+    <h3>Example 1 : change Text</h3>
+    <h1 id="heading">Hello, I am Atharv</h1>
+    <button onclick="changeText()">Change Text</button>
+
+    <!-- =========== Change color on click ==========  -->
+
+    <h3>Example 2 : Change style color using DOM</h3>
+
+    <p id="msg">
+      Lorem ipsum dolor sit amet consectetur adipisicing elit. Architecto
+      quisquam non, sunt aliquid assumenda ipsam? Id, ullam obcaecati. Beatae
+      iusto inventore omnis temporibus commodi. Illum ex aliquid veniam
+      repellendus modi!
+    </p>
+
+    <button onclick="changeColor()">change color</button>
+
+    <!-- =========== Change Image on click ==========  -->
+
+    <h3>Example 3 : Change Image using DOM</h3>
+
+    <img id="img_ch" src="images/bangol tiger.jpg" alt="image" width="300" />
+
+    <button onclick="changeImage()">Change Image</button>
+
+    <!-- =========== Get input form user and display ==========  -->
+
+    <h3>Example 4 : Get input form user and display</h3>
+
+    <input type="text" id="nameip" placeholder="Enter your name..." />
+    <button onclick="showName()">Submit</button>
+    <h2 id="op"></h2>
+
+    <!-- =========== Change font Size using button ==========  -->
+
+    <p id="para">
+      Lorem ipsum dolor, sit amet consectetur adipisicing elit. Ea eos nostrum
+      enim, natus nisi quae voluptatem, atque dolorum voluptas nihil veritatis
+      impedit voluptates cum saepe distinctio autem. Aperiam, incidunt
+      praesentium!
+    </p>
+    <button onclick="increase()">+</button>
+    <button onclick="decrease()">-</button>
+
+    <script>
+      function changeText() {
+        document.getElementById("heading").innerHTML = " I am From Pune.";
+      }
+
+      function changeColor() {
+        document.getElementById("msg").style.color = "red";
+      }
+
+      function changeImage() {
+        document.getElementById("img_ch").src = "images/i20.jpg";
+      }
+
+      function showName() {
+        let name = document.getElementById("nameip").value;
+        document.getElementById("op").innerHTML = "Hello Welcome, " + name;
+      }
+
+      let size = 14;
+
+      function increase() {
+        size++;
+        document.getElementById("para").style.fontSize = size + "px";
+      }
+
+      function decrease() {
+        size--;
+        document.getElementById("para").style.fontSize = size + "px";
+      }
+
+      // <!-- =========== toggle theme ==========  -->
+      function toggleTheme() {
+        document.body.classList.toggle("dark-mode");
+      }
+    </script>
+  </body>
+</html>

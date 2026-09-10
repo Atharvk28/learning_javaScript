@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Array Elements</title>
+</head>
+
+<body>
+  <h1>Array Elements</h1>
+
+  <script>
+
+
+    // ========== Array Elements ==========
+
+    var a = ['tejas', 22, 'male', 'Atharv', 'Kamble'];
+    document.write(a);
+    document.write('<br>');
+
+    // ==========  Update Array Elements ==========
+
+    a[4] = 'pune';
+    document.write(a);
+    document.write('<br>');
+
+    // ==========  Delete Array Elements ==========
+
+    delete a[4];
+    document.write(a);
+
+    // ==========  Sort and Reverse Array Elements ==========
+
+    var b = ['Atharv', 'Raj', 'Sumit', 'Anurag', 'jaydeep'];
+    document.write('<br>');
+
+
+    // ==== srot ====
+    document.write(b + '<br>');
+    b.sort();
+
+    document.write(b);
+    document.write('<br>');
+
+    // ==== Reverse ====
+    b.reverse();
+    document.write(b + '<br>');
+
+
+
+    //========== pop ========== //last in first out
+
+    var j = ['one', 'two', 'three', 'four', 'five'];
+
+    j.pop();
+    document.write(j + '<br>');
+
+    //========== Push ========== // to add new element in array in last
+
+    j.push('six');
+    document.write(j + '<br>');
+
+    //========== shift  ========== //  first in first out
+
+    var k = ['one', 'two', 'three', 'four', 'five'];
+
+    document.write(k + '<br>');
+
+    k.shift();
+    document.write(k + '<br>');
+
+    // ========== unshift ========== // to add new element in first
+
+    var r = ['one', 'two', 'three', 'four', 'five'];
+
+    r.unshift('eight');
+    document.write(r + '<br>');
+
+    // ==========  Concat  ========== // Adding two Arrays
+
+    var r = ['one', 'two', 'three', 'four', 'five'];
+    var p = ['raj', 'rohan', 'amit', 'sujal', 'anurag'];
+    var d = ['dnayneshwari', 'ajhar', 'vanshika'];
+
+    var u = r.concat(p);
+    document.write(u + '<br>');
+
+    var z = u.concat(d);
+    document.write(z + '<br>');
+
+
+    //========== Join ==========//
+
+    var num = ['one', 'two', 'three', 'four', 'five'];
+    var pk = ['raj', 'rohan', 'amit', 'sujal', 'anurag'];
+
+    var tk = num.join(pk);
+    document.write(tk + '<br>');
+
+
+
+
+
+
+
+
+
+
+
+  </script>
+</body>
+
+</html>
