@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <h1>BMI Calculator</h1>
+  <form action="">
+
+    <div class="input-sec">
+      <p><label for="height">Enter Your Height(M) : </label></p>
+      <input type="number" id="height" placeholder="Enter your height..." name="height">
+    </div>
+    <div class="input-sec">
+      <p><label for="weight">Enter Your Weight(Kg) : </label></p>
+      <input type="number" id="weight" placeholder="Enter your weight..." name="weight">
+    </div>
+    <div class="input-sec"> 
+      <button type="submit" id="Calculate" >Calculate </button>
+    </div>
+
+    <div class="input-sec">
+      <p>Your BMI Ratio is : </p>
+      <span id="result" class="result-text"></span>
+      <span id="tagline"></span>
+    </div>
+
+  </form>
+</body>
+<script src="script.js"></script>
+</html>
