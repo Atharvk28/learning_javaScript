@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    body {
+      background-color: #333;
+      color: #fff;
+    }
+
+    img {
+      height: 100px;
+      width: 100px;
+      background-color: gray;
+    }
+  </style>
+</head>
+
+<body>
+  <h2>Event Listeners</h2>
+
+  <ul id="images">
+    <li><img src="/images/bangol tiger.jpg" id="bengolTiger" alt=""></li>
+    <li><img src="/images/harrier.jpg" id="harrier" alt=""></li>
+    <li><img src="/images/hundai venue.jpg" id="venue" alt=""></li>
+    <li><img src="/images/i20.jpg" id="i20" alt=""></li>
+    <li><img src="/images/seltos.jpg" alt=""></li>
+    <li><a style="color: aliceblue;" href="google.com" id="google">Google</a></li>
+  </ul>
+</body>
+<script>
+  document.getElementById('images').addEventListener('click', function (e) {
+    let tag1 = e.target.tagName
+    console.log(tag1)
+    if (tag1 == "IMG") {
+      const event = e.target.parentNode;
+      event.remove();
+    }
+  },false)
+
+</script>
+
+</html>
