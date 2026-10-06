@@ -10,7 +10,7 @@
     }
   </style>
 </head>
-<body>
+<body >
   <h1>Color Changing Background ! </h1>
   <button class="start">Start</button>
   <button class="end">End</button>
@@ -32,7 +32,7 @@ function startchangingcolor(){
   }
 
   function stopchangingcolor(){
-    clearInterval(interval)
+    cle(interval)
   }
 
 const changingColor = function(){
@@ -40,7 +40,7 @@ const changingColor = function(){
  interval =  setInterval(startchangingcolor,1000)
 }
 
-document.querySelector('.start').addEventListener('click',changingColor);
+document.querySelector('body').addEventListener('click',changingColor);
 document.querySelector('.end').addEventListener('click', stopchangingcolor);
 
 
