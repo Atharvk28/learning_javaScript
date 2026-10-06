@@ -5,31 +5,19 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Document</title>
   <style>
-    *{
-      margin: 0;
-      padding: 0;
-    }
-    .p{
-     height: 100vh;
-     width: 100%;
-    display: flex;
-    align-items: center;     
-    justify-content: center; 
-}
-
-    
-    #target{
+    #rect{
       width: 300px;
       height: 200px;
       border: 2px solid black;
-      user-select: none;
     }
   </style>
 </head>
-<body class="p">
-  
-  <div id="target"></div>
+<body>
+  <div id="rect"></div>
 </body>
-<script src="mouse_move.js">
+<script>
+  document.getElementById('rect').addEventListener("mousemove",() => {
+    console.log("Atharv");
+  })
 </script>
 </html>
