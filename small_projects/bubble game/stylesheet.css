@@ -1,9 +1,14 @@
-html,  body {
-  font-family: Georgia, 'Times New Roman', Times, serif;
+*{
+  box-sizing: border-box;
+
+}
+html,
+body {
+  font-family: Georgia, "Times New Roman", Times, serif;
   width: 100%;
   height: 100%;
 }
-.main{
+.main {
   display: flex;
   align-items: center;
   justify-content: center;
@@ -11,15 +16,14 @@ html,  body {
   height: 100%;
   background-color: rgb(189, 239, 189);
 }
-.panel{
-
+.panel {
   overflow: hidden;
   width: 90%;
   height: 90%;
   background-color: #fff;
   border-radius: 5px;
 }
-.ptop{
+.ptop {
   padding: 10px;
   display: flex;
   justify-content: space-evenly;
@@ -28,12 +32,26 @@ html,  body {
   height: 100px;
   background-color: rgb(89, 160, 89);
 }
-.elem{
+.startdiv{
+  position: absolute;
+  left: 10%;
+}
+#startbtn{
+  width: auto;
+  background-color: gray;
+}
+.elem {
   display: flex;
   align-items: center;
   gap: 20px;
 }
-.box{
+.elem h3 {
+  color: #fff;
+
+  font-weight: 300;
+  font-size: 20px;
+}
+.box {
   padding: 10px;
   background-color: #fff;
   border-radius: 5px;
@@ -41,7 +59,29 @@ html,  body {
   font-weight: 400;
   /* width: ; */
 }
-.pbtm{
+.pbtm {
+  display: flex;
+  flex-wrap: wrap;
+  padding: 20px;
   width: 100%;
-  height: 100% -100px;
+  gap: 10px;
+  height: calc(100% -100px);
+  background-color: #fff;
+  overflow: hidden;
+  /* box-sizing: border-box;/ */
+}
+.bubble {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 40px;
+  height: 40px;
+  background-color: rgb(53, 201, 53);
+  color: #fff;
+  border-radius: 50%;
+  font-weight: 400;
+}
+.bubble:hover{
+  cursor: pointer;
+  background-color: rgb(46, 175, 46);
 }
