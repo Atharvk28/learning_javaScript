@@ -50,10 +50,37 @@ body {
 }
 .startdiv {
   flex: 0 0 auto;
+  transform: translateX(-100px);
 }
 #startbtn {
   width: auto;
-  background-color: gray;
+  padding: 12px 22px;
+  border: 2px solid rgb(53, 201, 53);
+  border-radius: 999px;
+  background-color: rgb(53, 201, 53);
+  color: #fff;
+  font: inherit;
+  font-size: clamp(1rem, 3vw, 1.25rem);
+  font-weight: 700;
+  cursor: pointer;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+  transition: background-color 150ms ease, transform 150ms ease,
+    box-shadow 150ms ease;
+}
+
+#startbtn:hover {
+  background-color: rgb(46, 175, 46);
+  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.25);
+  transform: translateY(-2px);
+}
+
+#startbtn:active {
+  transform: translateY(0);
+}
+
+#startbtn:focus-visible {
+  outline: 3px solid #fff;
+  outline-offset: 3px;
 }
 .elem {
   display: flex;
@@ -101,17 +128,63 @@ body {
   cursor: pointer;
   background-color: rgb(46, 175, 46);
 }
-.gameoverscreen{
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  /* top: 0; */
-  /* left: 0; */
+.gameoverscreen {
+  display: grid;
+  place-items: center;
   position: absolute;
-  width: inherit;
-  height: inherit;
+  inset: 0;
+  z-index: 1;
+  margin: 0;
   background-color: rgba(0, 0, 0, 0.5);
-  
+  color: #fff;
+  font-size: clamp(2rem, 6vw, 4rem);
+  text-align: center;
+}
+.replaybutton {
+  position: absolute;
+  top: calc(50% + clamp(3rem, 7vw, 4rem));
+  left: 50%;
+  z-index: 2;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  max-width: calc(100% - 32px);
+  padding: 12px 22px;
+  transform: translateX(-50%);
+  border: 2px solid rgb(53, 201, 53);
+  border-radius: 999px;
+  background-color: rgb(53, 201, 53);
+  color: #fff;
+  font: inherit;
+  font-size: clamp(1rem, 3vw, 1.25rem);
+  font-weight: 700;
+  cursor: pointer;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.25);
+  transition: background-color 150ms ease, transform 150ms ease,
+    box-shadow 150ms ease;
+}
+
+.replaybutton:hover {
+  background-color: rgb(46, 175, 46);
+  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.3);
+  transform: translate(-50%, -2px);
+}
+
+.replaybutton:active {
+  transform: translate(-50%, 0);
+}
+
+.replaybutton:focus-visible {
+  outline: 3px solid #fff;
+  outline-offset: 3px;
+}
+
+.replaybutton img {
+  width: 24px;
+  height: 24px;
+  object-fit: contain;
+  filter: brightness(0) invert(1);
 }
 
 @media (max-width: 640px) {
@@ -143,4 +216,3 @@ body {
     grid-row: 3;
   }
 }
-

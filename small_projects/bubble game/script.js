@@ -11,7 +11,8 @@ function setTimer() {
       document.querySelector("#timerval").textContent = timer;
     } else {
       clearInterval(timerinterval);
-      document.querySelector(".pbtm").innerHTML = `<h1 class="gameoverscreen"> Game over </h1>`;
+      document.querySelector(".pbtm").innerHTML = `<h1 class="gameoverscreen"> Game over </h1>
+      <button class="replaybutton"> <img width="100" height="100" src="https://img.icons8.com/ios-filled/100/memories.png" alt="memories"/></i>RePlay</button>`;
     }
   }, 1000);
 }
