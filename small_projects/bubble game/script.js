@@ -1,6 +1,7 @@
 var score = 0; // increaseScore function
-var timer = 60;
+var timer = 5;
 let hit ; // setTimer function
+let level; //to get level of game
 
 // ============ set timer function ==========
 function setTimer() {
@@ -10,7 +11,7 @@ function setTimer() {
       document.querySelector("#timerval").textContent = timer;
     } else {
       clearInterval(timerinterval);
-      document.querySelector(".pbtm").innerHTML = `<h1> Game over </h1>`;
+      document.querySelector(".pbtm").innerHTML = `<h1 class="gameoverscreen"> Game over </h1>`;
     }
   }, 1000);
 }
@@ -27,11 +28,14 @@ function getHitnum() {
   document.querySelector("#hitval").textContent = hit;
 }
 
+// ============== level of game =========== 
+document.querySelector
+
 // =================== bubbles function ==========
 function getBubbles() {
   let bubbles = "";
 
-  for (let i = 1; i <= 160; i++) {
+  for (let i = 1; i <= level; i++) {
     var rn = Math.ceil(Math.random() * 10);
     bubbles += `<div class="bubble">${rn}</div>`;
   }
@@ -40,7 +44,6 @@ function getBubbles() {
 }
 
 // =============== bubble click function==========
-
 
 document.querySelector(".pbtm").addEventListener("click", (details) => {
   let bubbleclk = Number(details.target.textContent);
@@ -56,6 +59,7 @@ document.querySelector(".pbtm").addEventListener("click", (details) => {
   }
 });
 
+// ======== start button ============= 
 document.querySelector(".startdiv").addEventListener("click", () => {
   getBubbles();
   getHitnum();
