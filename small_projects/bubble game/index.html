@@ -12,7 +12,40 @@
     <div class="main">
       <div class="panel">
         <div class="pside">
-          <h2>High Score</h2>
+          <section class="highScorebox" aria-labelledby="high-score-title">
+            <h2 id="high-score-title">High Score</h2>
+            <div class="highScore" aria-label="High score">000</div>
+          </section>
+          <fieldset class="level">
+            <legend>Level</legend>
+            <label class="level-option" for="level-easy">
+              <button id="level-easy" name="level" value="Easy" type="radio" checked>
+              <span>Easy</span>
+            </label>
+            <label class="level-option" for="level-medium">
+              <button id="level-medium" name="level" value="Medium" type="radio">
+              <span>Medium</span>
+            </label>
+            <label class="level-option" for="level-hard">
+              <button id="level-hard" name="level" value="Hard" type="radio">
+              <span>Hard</span>
+            </label>
+          </fieldset>
+          <fieldset class="level timer-options">
+            <legend>Timer</legend>
+            <label class="level-option" for="timer-30">
+              <input id="timer-30" name="timerinput" value="30" type="radio">
+              <span>30 sec</span>
+            </label>
+            <label class="level-option" for="timer-60">
+              <input id="timer-60" name="timerinput" value="60" type="radio" checked>
+              <span>60 sec</span>
+            </label>
+            <label class="level-option" for="timer-120">
+              <input id="timer-120" name="timerinput" value="120" type="radio">
+              <span>120 sec</span>
+            </label>
+          </fieldset>
         </div>
         <div class="ptop">
         <div class="startdiv"> <button id="startbtn">Start</button></div>
@@ -23,7 +56,7 @@
           </div>
           <div class="elem">
             <h3>Timer:</h3>
-            <div id="timerval" class="box">60</div>
+            <div id="timerval" class="box"></div>
           </div>
           <div class="elem">
             <h3>Score:</h3>

@@ -32,9 +32,73 @@ body {
   grid-column: 1;
   grid-row: 2;
   display: flex;
-  align-items: flex-start;
+  flex-direction: column;
+  gap: 20px;
+  align-items: stretch;
   padding: 20px;
   background-color: rgb(64, 121, 64);
+}
+.highScorebox,
+.level {
+  margin: 0;
+  padding: 16px;
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  border-radius: 12px;
+  background-color: rgba(255, 255, 255, 0.12);
+  color: #fff;
+}
+.highScorebox h2,
+.level legend {
+  margin: 0 0 12px;
+  color: #fff;
+  font-size: clamp(1rem, 2vw, 1.25rem);
+  font-weight: 700;
+}
+.highScore {
+  display: grid;
+  min-height: 56px;
+  place-items: center;
+  border-radius: 8px;
+  background-color: #fff;
+  color: rgb(46, 125, 50);
+  font-size: clamp(1.5rem, 4vw, 2rem);
+  font-weight: 700;
+  font-variant-numeric: tabular-nums;
+}
+.level {
+  display: grid;
+  gap: 8px;
+  min-width: 0;
+}
+.level legend {
+  padding: 0 6px;
+}
+.level-option {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  min-height: 42px;
+  padding: 8px 10px;
+  border: 1px solid transparent;
+  border-radius: 8px;
+  color: #fff;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: background-color 150ms ease, border-color 150ms ease;
+}
+.level-option:hover {
+  border-color: rgba(255, 255, 255, 0.5);
+  background-color: rgba(255, 255, 255, 0.12);
+}
+.level-option input {
+  width: 18px;
+  height: 18px;
+  margin: 0;
+  accent-color: rgb(53, 201, 53);
+}
+.level-option:focus-within {
+  outline: 2px solid #fff;
+  outline-offset: 2px;
 }
 .ptop {
   padding: 10px;
@@ -198,11 +262,29 @@ body {
   .pside {
     grid-column: 1;
     grid-row: 2;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-items: stretch;
     padding: 10px 16px;
   }
 
-  .pside h2 {
-    margin: 0;
+  .highScorebox,
+  .level {
+    flex: 1 1 140px;
+  }
+
+  .level {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
+
+  .level legend {
+    grid-column: 1 / -1;
+  }
+
+  .level-option {
+    justify-content: center;
+    gap: 6px;
+    padding: 8px 4px;
   }
 
   .ptop {

@@ -1,7 +1,19 @@
 var score = 0; // increaseScore function
-var timer = 5;
-let hit ; // setTimer function
+let timer = 60;
+let hit; // setTimer function
 let level; //to get level of game
+
+// ================== get timer input ==========
+const timerinput = document
+  .querySelector('input[name="timerinput"]:checked')
+  .addEventListener("click", () => {
+    document.querySelector(timerinput).innerHTML =
+      `              <input id="${timerinput.id}" name="timerinput" value="${timerinput.value}" type="radio" checked>
+`;
+    timer = Number(timerinput.value);
+  });
+
+document.querySelector("#timerval").innerHTML = timer;
 
 // ============ set timer function ==========
 function setTimer() {
@@ -11,7 +23,8 @@ function setTimer() {
       document.querySelector("#timerval").textContent = timer;
     } else {
       clearInterval(timerinterval);
-      document.querySelector(".pbtm").innerHTML = `<h1 class="gameoverscreen"> Game over </h1>
+      document.querySelector(".pbtm").innerHTML =
+        `<h1 class="gameoverscreen"> Game over </h1>
       <button class="replaybutton"> <img width="100" height="100" src="https://img.icons8.com/ios-filled/100/memories.png" alt="memories"/></i>RePlay</button>`;
     }
   }, 1000);
@@ -29,8 +42,8 @@ function getHitnum() {
   document.querySelector("#hitval").textContent = hit;
 }
 
-// ============== level of game =========== 
-document.querySelector
+// ============== level of game ===========
+document.querySelector;
 
 // =================== bubbles function ==========
 function getBubbles() {
@@ -53,14 +66,13 @@ document.querySelector(".pbtm").addEventListener("click", (details) => {
     increaseScore();
     getBubbles();
     getHitnum();
-  }
-  else{
+  } else {
     getBubbles();
     getHitnum();
   }
 });
 
-// ======== start button ============= 
+// ======== start button =============
 document.querySelector(".startdiv").addEventListener("click", () => {
   getBubbles();
   getHitnum();
