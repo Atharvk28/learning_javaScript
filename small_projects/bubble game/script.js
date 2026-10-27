@@ -5,11 +5,10 @@ let level; //to get level of game
 
 // ================== get timer input ==========
 const timerinput = document
-  .querySelector('input[name="timerinput"]:checked')
-  .addEventListener("click", () => {
-    document.querySelector(timerinput).innerHTML =
-      `              <input id="${timerinput.id}" name="timerinput" value="${timerinput.value}" type="radio" checked>
-`;
+  .querySelector('input[name="timerinput"]')
+  .addEventListener("click", (target) => {
+    console.log
+    (timerinput.target);
     timer = Number(timerinput.value);
   });
 
@@ -30,6 +29,7 @@ function setTimer() {
   }, 1000);
 }
 
+
 // ============= Score function ==============
 function increaseScore() {
   score += 10;
@@ -49,7 +49,7 @@ document.querySelector;
 function getBubbles() {
   let bubbles = "";
 
-  for (let i = 1; i <= level; i++) {
+  for (let i = 1; i <= 148; i++) {
     var rn = Math.ceil(Math.random() * 10);
     bubbles += `<div class="bubble">${rn}</div>`;
   }
